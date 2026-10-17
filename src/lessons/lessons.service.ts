@@ -161,7 +161,7 @@ export class LessonsService {
         .join(', ')}\n`;
     if (kl?.length)
       out += `Class(es): ${kl.map((k) => k.longname).join(', ')}\n`;
-    if (ro?.length) out += `Room(s): ${ro.map((r) => r.longname).join(', ')}\n`;
+    if (ro?.length) out += `Room(s): ${ro.map((r) => r.name).join(', ')}\n`;
 
     return out;
   }
