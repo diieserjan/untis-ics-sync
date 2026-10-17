@@ -154,13 +154,13 @@ export class LessonsService {
     let out = '';
 
     if (te?.length)
-      out += `Teacher(s): ${te.map((t) => t.longname).join(', ')}\n`;
+      out += `Teacher(s): ${te.map((t) => t.name).join(', ')}\n`;
     if (su?.length)
       out += `Subject(s): ${su
-        .map((s) => `${s.longname} (${s.id})`)
+        .map((s) => `${s.name} (${s.id})`)
         .join(', ')}\n`;
     if (kl?.length)
-      out += `Class(es): ${kl.map((k) => k.longname).join(', ')}\n`;
+      out += `Class(es): ${kl.map((k) => k.name).join(', ')}\n`;
     if (ro?.length) out += `Room(s): ${ro.map((r) => r.name).join(', ')}\n`;
 
     return out;
