@@ -167,6 +167,6 @@ export class LessonsService {
   }
 
   buildLocation({ ro }: { ro: ShortData[] }) {
-    return ro.map((r) => r.longname).join('\n');
+    return ro.map((r) => r.name).join('\n');
   }
 }
