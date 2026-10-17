@@ -73,8 +73,8 @@ export class LessonsService {
               uid: l.id.toString(),
               title:
                 (l.lstext
-                  ? `${l.su?.map((s) => s.longname).join(', ')} (${l.lstext})`
-                  : l.su?.map((s) => s.longname).join(', ')) ??
+                  ? `${l.su?.map((s) => s.name).join(', ')} (${l.lstext})`
+                  : l.su?.map((s) => s.name).join(', ')) ??
                 'Unnamed lesson',
 
               description: this.buildDescription(l),
