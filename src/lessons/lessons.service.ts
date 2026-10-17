@@ -71,11 +71,8 @@ export class LessonsService {
           (l) =>
             ({
               uid: l.id.toString(),
-              title:
-                (l.lstext
-                  ? `${l.su?.map((s) => s.name).join(', ')} (${l.lstext})`
-                  : l.su?.map((s) => s.name).join(', ')) ??
-                'Unnamed lesson',
+             title: 
+               l.su?.map((s) => s.name).join(', ') ?? 'Unnamed lesson',
 
               description: this.buildDescription(l),
               location: this.buildLocation(l),
